@@ -26,10 +26,11 @@ tw-passage {
 }
 
 .loading{
+  	font-size: 12px;
 	position:fixed;
   	left:0px;
-  	bottom:30px;
-  	height:30px;
+  	bottom:50px;
+  	height:20px;
   	width:100%;
 }
 
@@ -130,10 +131,15 @@ It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teachin
 (click-goto:?page,&quot;2&quot;)</tw-passagedata><tw-passagedata pid="31" name="2" tags="" position="1800,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 2]
 </tw-passagedata><tw-passagedata pid="32" name="2.1" tags="" position="1801,221" size="100,100">You are in the bad teachers classroom and he scolded you again.
 (click-goto:?page,&quot;2.2&quot;)</tw-passagedata><tw-passagedata pid="33" name="2.2" tags="" position="1800,348" size="100,100">//(Inner Voice)//: Ah No, here we go again.
-(click-goto:?page,&quot;2.3&quot;)</tw-passagedata><tw-passagedata pid="34" name="intro" tags="" position="399,209" size="100,100">
+(click-goto:?page,&quot;2.3&quot;)</tw-passagedata><tw-passagedata pid="34" name="intro" tags="" position="399,209" size="100,100">&lt;style&gt;
+img {
+	max-width:100%;
+	max-height:100%;
+}
+&lt;/style&gt;
 (align:&quot;=&gt;&lt;=&quot;)[Welcome to THE GAME]
 
-(live: 3s)[(goto: &quot;charsel&quot;)]
+(live: 5s)[(goto: &quot;charsel&quot;)]
 
 
 
@@ -141,8 +147,9 @@ It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teachin
 
 
 
-
-&lt;span class=&quot;loading&quot;&gt;[(text-style:&quot;sway&quot;)[Loading...]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="namesel1" tags="" position="182,449" size="100,100">(set: $avatar to &quot;boy1&quot;)
+&lt;span class = &quot;loading&quot;&gt;
+Loading&lt;img src=&#39;assets/loading.gif&#39;&gt;
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="namesel1" tags="" position="182,449" size="100,100">(set: $avatar to &quot;boy1&quot;)
 
 Oh yes, I think I have seen you around.
 What is your name?
