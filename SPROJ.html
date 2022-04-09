@@ -25,12 +25,34 @@ tw-passage {
   	text-align: center;
 }
 
+.chap{
+	font-size: 36px;
+  	position: fixed;
+  	top: 50%;
+	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.loadingtitle{
+	font-size: 36px;
+  	text-align: center;
+  	border: 2px solid black;
+  	padding: 10px;
+  	margin:auto;
+ 	background-color: #000000;
+ 	position:fixed;
+  	left:0px;
+  	top:50px;
+  	width:100%;
+ 	line-height: 1.6;
+}
+
 .loading{
-  	font-size: 12px;
+  	font-size: 18px;
 	position:fixed;
   	left:0px;
-  	bottom:50px;
-  	height:20px;
+  	bottom:80px;
+  	height:30px;
   	width:100%;
 }
 
@@ -42,8 +64,38 @@ tw-passage {
   	border-radius: 5px;
 }
 
+.dialoguebox{
+  	color: black;
+  	text-align:left;
+	border: 2px solid white;
+ 	border-radius: 5px;
+  	padding: 10px;
+  	margin:auto;
+ 	background-color: white;
+ 	position:fixed;
+  	top:50px;
+  	left:50%;
+  	width:90%;
+	height: 200px;
+	transform: translate(-50%, 0%);
+}
+
+.arrow{
+	position:fixed;
+ 	bottom:5px;
+  	height:40px;
+  	width:40px;	
+  	left:50%;
+ 	transform: translate(-50%, 0%);
+}
+
+tw-story[tags~="loading"] {
+ background-image:url("assets/loading/loadbg.png");
+ background-size:cover;
+}
+
 tw-story[tags~="school"] {
- background-image:url("https://www.vcsedu.org/school/cypress-creek-elementary/sites/cypress-creek-elementary/files/styles/page_header_extra_small/public/header-images/cypress%20creek%20school%20info%20banner.jpg?itok=bTvA4hft");
+ background-image:url("assets/school/lawn.png");
  background-size:cover;
 }
 
@@ -54,6 +106,11 @@ tw-story[tags~="friends1"] {
 
 tw-story[tags~="friends2"] {
  background-image:url("https://thumbs.dreamstime.com/z/two-boys-school-sitting-bench-talking-two-kids-school-sitting-bench-talking-125185233.jpg");
+ background-size:cover;
+}
+
+tw-story[tags~="hall"] {
+ background-image:url("assets/school/hall.png");
  background-size:cover;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="400,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[A story to help u]
 
@@ -76,12 +133,13 @@ img {
 
 (set: $f1 to &quot;Ali&quot;)
 (set: $bff to &quot;Sam&quot;)
-</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="1101,99" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[&#39;&#39;Chapter 1: The Excuse&#39;&#39;]
+</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="1101,99" size="100,100">&lt;span class = &#39;chap&#39;&gt;&#39;&#39;Chapter 1:The Excuse&#39;&#39;&lt;/span&gt;
 
-(click-goto:?page,&quot;1.05&quot;)</tw-passagedata><tw-passagedata pid="4" name="1.05" tags="" position="1102,222" size="100,100">Period Bell Rings.
+(click-goto:?page,&quot;1.05&quot;)</tw-passagedata><tw-passagedata pid="4" name="1.05" tags="" position="1102,222" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;Period Bell Rings.
 
 It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teaching.
-(click-goto:?page,&quot;1.1&quot;)</tw-passagedata><tw-passagedata pid="5" name="1.1" tags="" position="1103,337" size="100,100">Ms. Anna: Hey everyone, hope you all had a fun weekend. Let&#39;s continue with plant biology today. How many of you have completed their homework?
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
+(click-goto:?page,&quot;1.1&quot;)</tw-passagedata><tw-passagedata pid="5" name="1.1" tags="" position="1103,337" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;Ms. Anna: Hey everyone, hope you all had a fun weekend. Let&#39;s continue with plant biology today. How many of you have completed their homework?
 
 [[I completely forgot about the homework, I wasn&#39;t able to complete it.-&gt;1.11]]
 
@@ -90,15 +148,39 @@ It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teachin
 [[(Inner Voice)When did we get a homework? I should ask $f1-&gt;1.13]]
 
 [[I wasn&#39;t feeling well, so I couldn&#39;t complete the homework.-&gt;1.14]]
-</tw-passagedata><tw-passagedata pid="6" name="1.11" tags="" position="888,459" size="100,100">Ms. Anna: This is the first and the last time I&#39;m allowing this. Please be careful next time.
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="6" name="1.11" tags="" position="888,459" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: This is the first and the last time I&#39;m allowing this. Please be careful next time.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
 
-(click-goto:?page,&quot;1.111&quot;)</tw-passagedata><tw-passagedata pid="7" name="1.12" tags="" position="1032,467" size="100,100">Ms. Anna: Bring your copy and get it checked by me first thing tomorrow. I will be in the staff room.(click-goto:?page,&quot;1.121&quot;)</tw-passagedata><tw-passagedata pid="8" name="1.13" tags="" position="1162,458" size="100,100">You: Hey $f1, was there a homework due today? When did this happen?
-(click-goto:?page,&quot;1.131&quot;)</tw-passagedata><tw-passagedata pid="9" name="1.14" tags="" position="1300,456" size="100,100">Ms. Anna: Oh get well soon, you can submit it next week.
-(click-goto:?page,&quot;1.141&quot;)</tw-passagedata><tw-passagedata pid="10" name="1.111" tags="" position="883,594" size="100,100">You: Sorry Ma&#39;am, won&#39;t happen again.(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="11" name="1.2" tags="" position="1159,971" size="100,100">Period Bell Rings again. Students start to leave class.
-(click-goto:?page,&quot;1.205&quot;)</tw-passagedata><tw-passagedata pid="12" name="1.121" tags="" position="1027,594" size="100,100">You: Thankyou Ma&#39;am. I will do that for sure. 
-(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="13" name="1.131" tags="" position="1165,600" size="100,100">$f1: Don&#39;t you remember, you bunked that class.(click-goto:?page,&quot;1.1311&quot;)</tw-passagedata><tw-passagedata pid="14" name="1.1311" tags="" position="1163,733" size="100,100">You: Shh, keep it down. Let me think of something.
-(click-goto:?page,&quot;1.13111&quot;)</tw-passagedata><tw-passagedata pid="15" name="1.13111" tags="" position="1160,850" size="100,100">You: I did the homework Ma&#39;am but forgot my copy in the car.
-(click-goto:?page,&quot;1.12&quot;)</tw-passagedata><tw-passagedata pid="16" name="1.141" tags="" position="1300,601" size="100,100">You: Thankyou Ma&#39;am.
+(click-goto:?page,&quot;1.111&quot;)</tw-passagedata><tw-passagedata pid="7" name="1.12" tags="" position="1032,467" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: Bring your copy and get it checked by me first thing tomorrow. I will be in the staff room.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.121&quot;)</tw-passagedata><tw-passagedata pid="8" name="1.13" tags="" position="1162,458" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Hey $f1, was there a homework due today? When did this happen?
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.131&quot;)</tw-passagedata><tw-passagedata pid="9" name="1.14" tags="" position="1300,456" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: Oh get well soon, you can submit it next week.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.141&quot;)</tw-passagedata><tw-passagedata pid="10" name="1.111" tags="" position="883,594" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Sorry Ma&#39;am, won&#39;t happen again.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="11" name="1.2" tags="" position="1159,971" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Period Bell Rings again. Students start to leave class.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.205&quot;)</tw-passagedata><tw-passagedata pid="12" name="1.121" tags="" position="1027,594" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am. I will do that for sure. 
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="13" name="1.131" tags="" position="1165,600" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$f1: Don&#39;t you remember, you bunked that class.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;(click-goto:?page,&quot;1.1311&quot;)</tw-passagedata><tw-passagedata pid="14" name="1.1311" tags="" position="1163,733" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Shh, keep it down. Let me think of something.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.13111&quot;)</tw-passagedata><tw-passagedata pid="15" name="1.13111" tags="" position="1160,850" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: I did the homework Ma&#39;am but forgot my copy in the car.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.12&quot;)</tw-passagedata><tw-passagedata pid="16" name="1.141" tags="" position="1300,601" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
 (click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="17" name="1.21" tags="" position="1154,1228" size="100,100">Teacher cold calls you: Hey you, you&#39;ve been awfully quite today. Come to the board and solve this.
 
 [[I am not sure about this one, can you help me with this part please.-&gt;1.211]]
@@ -131,24 +213,24 @@ It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teachin
 (click-goto:?page,&quot;2&quot;)</tw-passagedata><tw-passagedata pid="31" name="2" tags="" position="1800,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 2]
 </tw-passagedata><tw-passagedata pid="32" name="2.1" tags="" position="1801,221" size="100,100">You are in the bad teachers classroom and he scolded you again.
 (click-goto:?page,&quot;2.2&quot;)</tw-passagedata><tw-passagedata pid="33" name="2.2" tags="" position="1800,348" size="100,100">//(Inner Voice)//: Ah No, here we go again.
-(click-goto:?page,&quot;2.3&quot;)</tw-passagedata><tw-passagedata pid="34" name="intro" tags="" position="399,209" size="100,100">&lt;style&gt;
+(click-goto:?page,&quot;2.3&quot;)</tw-passagedata><tw-passagedata pid="34" name="intro" tags="loading" position="399,209" size="100,100">&lt;style&gt;
 img {
-	max-width:100%;
-	max-height:100%;
+	max-width:80%;
+	max-height:80%;
 }
 &lt;/style&gt;
-(align:&quot;=&gt;&lt;=&quot;)[Welcome to THE GAME]
+&lt;span class = &#39;loadingtitle&#39;&gt;Welcome to
+THE GAME&lt;/span&gt;
 
-(live: 5s)[(goto: &quot;charsel&quot;)]
 
-
+(live: 4s)[(goto: &quot;charsel&quot;)]
 
 
 
 
 
 &lt;span class = &quot;loading&quot;&gt;
-Loading&lt;img src=&#39;assets/loading.gif&#39;&gt;
+(text-colour:black)[Loading]&lt;img src=&#39;assets/loading/loading.gif&#39;&gt;
 &lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="namesel1" tags="" position="182,449" size="100,100">(set: $avatar to &quot;boy1&quot;)
 
 Oh yes, I think I have seen you around.
@@ -177,36 +259,41 @@ What is your name?
 
 (input-box:2bind $playername,&quot;=XX=&quot;,1,&quot;Enter Name&quot;)
 
-&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="39" name="cut1" tags="school" position="401,645" size="100,100">You run outside before you get into trouble.
+&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="39" name="cut1" tags="school" position="401,645" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You run outside before you get into trouble.
 
 You: &quot;Phew that was close.&quot;
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
 
 
 (if:$avatar is &quot;boy1&quot;)[(click-goto:?page,&quot;cut21&quot;)]
 (if:$avatar is &quot;boy2&quot;)[(click-goto:?page,&quot;cut22&quot;)]
 (if:$avatar is &quot;girl1&quot;)[(click-goto:?page,&quot;cut23&quot;)]
-(if:$avatar is &quot;girl2&quot;)[(click-goto:?page,&quot;cut24&quot;)]</tw-passagedata><tw-passagedata pid="40" name="cut21" tags="friends1" position="176,771" size="100,100">You: &quot;Oh hi $bff, $f1. 
+(if:$avatar is &quot;girl2&quot;)[(click-goto:?page,&quot;cut24&quot;)]</tw-passagedata><tw-passagedata pid="40" name="cut21" tags="friends1" position="176,771" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
 $bff: whats up, $playername?
 $f1: good to see you, $playername.
-
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="41" name="cut3" tags="" position="408,964" size="100,100">You meet your friends, and start walking towards the hallway.
-
-(click-goto:?page,&quot;1&quot;)</tw-passagedata><tw-passagedata pid="42" name="cut22" tags="friends2" position="324,772" size="100,100">You: &quot;Oh hi $bff, $f1. 
-
-$bff: whats up, $playername?
-$f1: good to see you, $playername.
-
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="43" name="cut23" tags="friends3" position="477,777" size="100,100">You: &quot;Oh hi $bff, $f1. 
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="41" name="cut3" tags="hall" position="408,964" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You meet your friends, and start walking towards the hallway.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
+(click-goto:?page,&quot;1&quot;)</tw-passagedata><tw-passagedata pid="42" name="cut22" tags="friends2" position="324,772" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
 $bff: whats up, $playername?
 $f1: good to see you, $playername.
-
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="44" name="cut24" tags="freinds4" position="625,777" size="100,100">You: &quot;Oh hi $bff, $f1. 
+&lt;img src=&#39;assets/down_arr.png&#39;&gt;
+&lt;/span&gt;
+(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="43" name="cut23" tags="friends3" position="477,777" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
 $bff: whats up, $playername?
 $f1: good to see you, $playername.
+&lt;img src=&#39;assets/down_arr.png&#39;&gt;
+&lt;/span&gt;
+(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="44" name="cut24" tags="freinds4" position="625,777" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
+$bff: whats up, $playername?
+$f1: good to see you, $playername.
+&lt;img src=&#39;assets/down_arr.png&#39;&gt;
+&lt;/span&gt;
 (click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="45" name="1.205" tags="" position="1099,1098" size="100,100">Your next period beings. Maths.
 
 (click-goto:?page,&quot;1.2075&quot;)</tw-passagedata><tw-passagedata pid="46" name="1.2075" tags="" position="1210,1099" size="100,100">You didn&#39;t get proper sleep last night.
