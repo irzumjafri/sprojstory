@@ -25,6 +25,15 @@ tw-passage {
   	text-align: center;
 }
 
+.startbuttons{
+  	position:fixed;
+  	left:0px;
+  	bottom:15%;
+  	height:30px;
+  	width:100%;
+  	margin: auto;
+}
+
 .chap{
 	font-size: 36px;
   	position: fixed;
@@ -33,27 +42,23 @@ tw-passage {
   	transform: translate(-50%, -50%);
 }
 
-.loadingtitle{
-	font-size: 36px;
-  	text-align: center;
-  	border: 2px solid black;
-  	padding: 10px;
-  	margin:auto;
- 	background-color: #000000;
- 	position:fixed;
-  	left:0px;
-  	top:50px;
-  	width:100%;
- 	line-height: 1.6;
-}
-
 .loading{
   	font-size: 18px;
 	position:fixed;
-  	left:0px;
-  	bottom:80px;
-  	height:30px;
+  	left:90%;
+  	bottom:10%;
+  	height:7%;
   	width:100%;
+  	transform: translate(-100%, 0%);
+}
+
+.startbut {
+  	font-family: 'Press Start 2P', cursive;
+	font-size: 28px;
+  	padding: 10px;
+  	border: 2px solid black;
+  	background-color: black;
+  	border-radius: 5px;
 }
 
 .pixbut {
@@ -94,6 +99,11 @@ tw-story[tags~="loading"] {
  background-size:cover;
 }
 
+tw-story[tags~="welcome"] {
+ background-image:url("assets/welcome.png");
+ background-size:cover;
+}
+
 tw-story[tags~="school"] {
  background-image:url("assets/school/lawn.png");
  background-size:cover;
@@ -112,14 +122,44 @@ tw-story[tags~="friends2"] {
 tw-story[tags~="hall"] {
  background-image:url("assets/school/hall.png");
  background-size:cover;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="400,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[A story to help u]
+}
 
+tw-story[tags~="outsideclass"] {
+ background-image:url("assets/school/outsideclass.png");
+ background-size:cover;
+}
 
+tw-story[tags~="bioteacher"] {
+ background-image:url("assets/school/bioteacher.png");
+ background-size:cover;
+}
 
+tw-story[tags~="whispering1"] {
+ background-image:url("assets/school/whispering1.png");
+ background-size:cover;
+}
 
-&lt;span class = &quot;pixbut&quot;&gt;[[Start Game-&gt;intro]]&lt;/span&gt;
+tw-story[tags~="whispering2"] {
+ background-image:url("assets/school/whispering2.png");
+ background-size:cover;
+}
 
-&lt;span class = &quot;pixbut&quot;&gt;Load Game&lt;/span&gt;</tw-passagedata><tw-passagedata pid="2" name="charsel" tags="" position="397,323" size="100,100">Hi, you look lost. You aren&#39;t allowed here. I can&#39;t see you properly. What do you look like?
+tw-story[tags~="speakingbio1"] {
+ background-image:url("assets/school/speakingbio1.png");
+ background-size:cover;
+}
+
+tw-story[tags~="speakingbio2"] {
+ background-image:url("assets/school/speakingbio2.png");
+ background-size:cover;
+}
+
+tw-story[tags~="class"] {
+ background-image:url("assets/school/class.png");
+ background-size:cover;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="welcome" position="400,100" size="100,100">&lt;span class = &quot;startbuttons&quot;&gt;
+&lt;span class = &quot;startbut&quot;&gt;[[Start Game-&gt;intro]]&lt;/span&gt; &lt;span class = &quot;startbut&quot;&gt;Load Game&lt;/span&gt;
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="2" name="charsel" tags="" position="397,323" size="100,100">Hi, you look lost. You aren&#39;t allowed here. I can&#39;t see you properly. What do you look like?
 
 &lt;style&gt;
 img {
@@ -128,57 +168,58 @@ img {
 }
 &lt;/style&gt;
 
-[[&lt;img src=&#39;assets/avatar.png&#39;&gt;-&gt;namesel1]] [[&lt;img src=&#39;assets/avatar.png&#39;&gt;-&gt;namesel2]]&lt;/div&gt;
-[[&lt;img src=&#39;assets/avatar.png&#39;&gt;-&gt;namesel3]] [[&lt;img src=&#39;assets/avatar.png&#39;&gt;-&gt;namesel4]]&lt;/div&gt;
+[[&lt;img src=&#39;assets/characters/boy.png&#39;&gt;-&gt;namesel1]]             [[&lt;img src=&#39;assets/characters/girl.png&#39;&gt;-&gt;namesel2]]&lt;/div&gt;
+
 
 (set: $f1 to &quot;Ali&quot;)
 (set: $bff to &quot;Sam&quot;)
-</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="1101,99" size="100,100">&lt;span class = &#39;chap&#39;&gt;&#39;&#39;Chapter 1:The Excuse&#39;&#39;&lt;/span&gt;
+(set: $teacher1 to &quot;Ms. Anna&quot;)
+(set: $teacher2 to &quot;Mr. Bill&quot;)</tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="1101,99" size="100,100">&lt;span class = &#39;chap&#39;&gt;&#39;&#39;Chapter 1:The Excuse&#39;&#39;&lt;/span&gt;
 
-(click-goto:?page,&quot;1.05&quot;)</tw-passagedata><tw-passagedata pid="4" name="1.05" tags="" position="1102,222" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;Period Bell Rings.
+(click-goto:?page,&quot;1.05&quot;)</tw-passagedata><tw-passagedata pid="4" name="1.05" tags="outsideclass" position="1102,222" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;Period Bell Rings.
 
 It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teaching.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
-(click-goto:?page,&quot;1.1&quot;)</tw-passagedata><tw-passagedata pid="5" name="1.1" tags="" position="1103,337" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;Ms. Anna: Hey everyone, hope you all had a fun weekend. Let&#39;s continue with plant biology today. How many of you have completed their homework?
+(click-goto:?page,&quot;1.1&quot;)</tw-passagedata><tw-passagedata pid="5" name="1.1" tags="bioteacher" position="1104,338" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;$teacher1: Hey everyone, hope you all had a fun weekend. Let&#39;s continue with plant biology today. How many of you have completed their homework?
 
 [[I completely forgot about the homework, I wasn&#39;t able to complete it.-&gt;1.11]]
 
 [[I did the homework but forgot the copy in my car-&gt;1.12]]
 
-[[(Inner Voice)When did we get a homework? I should ask $f1-&gt;1.13]]
+(if:$avatar is &quot;boy&quot;)[[[(Inner Voice)When did we get a homework? I should ask $f1-&gt;1.13]]]\(else:)[[[(Inner Voice)When did we get a homework? I should ask $f1-&gt;1.135]]]
 
 [[I wasn&#39;t feeling well, so I couldn&#39;t complete the homework.-&gt;1.14]]
-&lt;/span&gt;</tw-passagedata><tw-passagedata pid="6" name="1.11" tags="" position="888,459" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: This is the first and the last time I&#39;m allowing this. Please be careful next time.
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="6" name="1.11" tags="bioteacher" position="758,466" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$teacher1: This is the first and the last time I&#39;m allowing this. Please be careful next time.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
 
-(click-goto:?page,&quot;1.111&quot;)</tw-passagedata><tw-passagedata pid="7" name="1.12" tags="" position="1032,467" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: Bring your copy and get it checked by me first thing tomorrow. I will be in the staff room.
+(click-goto:?page,&quot;1.111&quot;)</tw-passagedata><tw-passagedata pid="7" name="1.12" tags="bioteacher" position="966,465" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$teacher1: Bring your copy and get it checked by me first thing tomorrow. I will be in the staff room.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.121&quot;)</tw-passagedata><tw-passagedata pid="8" name="1.13" tags="" position="1162,458" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Hey $f1, was there a homework due today? When did this happen?
+(click-goto:?page,&quot;1.121&quot;)</tw-passagedata><tw-passagedata pid="8" name="1.13" tags="whispering1" position="1183,472" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Hey $f1, was there a homework due today? When did this happen?
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.131&quot;)</tw-passagedata><tw-passagedata pid="9" name="1.14" tags="" position="1300,456" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Ms. Anna: Oh get well soon, you can submit it next week.
+(click-goto:?page,&quot;1.131&quot;)</tw-passagedata><tw-passagedata pid="9" name="1.14" tags="bioteacher" position="1422,474" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$teacher1: Oh get well soon, you can submit it next week.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.141&quot;)</tw-passagedata><tw-passagedata pid="10" name="1.111" tags="" position="883,594" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Sorry Ma&#39;am, won&#39;t happen again.
+(click-goto:?page,&quot;1.141&quot;)</tw-passagedata><tw-passagedata pid="10" name="1.111" tags="speakingbio1" position="756,599" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Sorry Ma&#39;am, won&#39;t happen again.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="11" name="1.2" tags="" position="1159,971" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Period Bell Rings again. Students start to leave class.
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="11" name="1.2" tags="class" position="1159,971" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;Period Bell Rings again. Students start to leave class.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.205&quot;)</tw-passagedata><tw-passagedata pid="12" name="1.121" tags="" position="1027,594" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am. I will do that for sure. 
+(click-goto:?page,&quot;1.205&quot;)</tw-passagedata><tw-passagedata pid="12" name="1.121" tags="speakingbio1" position="964,598" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am. I will do that for sure. 
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="13" name="1.131" tags="" position="1165,600" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$f1: Don&#39;t you remember, you bunked that class.
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="13" name="1.131" tags="whispering1" position="1185,598" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$f1: Don&#39;t you remember, you bunked that class.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
-&lt;/span&gt;(click-goto:?page,&quot;1.1311&quot;)</tw-passagedata><tw-passagedata pid="14" name="1.1311" tags="" position="1163,733" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Shh, keep it down. Let me think of something.
-(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
-&lt;/span&gt;
-(click-goto:?page,&quot;1.13111&quot;)</tw-passagedata><tw-passagedata pid="15" name="1.13111" tags="" position="1160,850" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: I did the homework Ma&#39;am but forgot my copy in the car.
+&lt;/span&gt;(click-goto:?page,&quot;1.1311&quot;)</tw-passagedata><tw-passagedata pid="14" name="1.1311" tags="whispering1" position="1182,723" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Shh, keep it down. Let me think of something.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;1.12&quot;)</tw-passagedata><tw-passagedata pid="16" name="1.141" tags="" position="1300,601" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am.
+(click-goto:?page,&quot;1.13111&quot;)</tw-passagedata><tw-passagedata pid="15" name="1.13111" tags="speakingbio1" position="1160,850" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: I did the homework Ma&#39;am but forgot my copy in the car.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.12&quot;)</tw-passagedata><tw-passagedata pid="16" name="1.141" tags="speakingbio1" position="1430,600" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
 (click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="17" name="1.21" tags="" position="1154,1228" size="100,100">Teacher cold calls you: Hey you, you&#39;ve been awfully quite today. Come to the board and solve this.
@@ -215,159 +256,143 @@ It&#39;s your Biology class. You go inside and sit while Ms. Anna starts teachin
 (click-goto:?page,&quot;2.2&quot;)</tw-passagedata><tw-passagedata pid="33" name="2.2" tags="" position="1800,348" size="100,100">//(Inner Voice)//: Ah No, here we go again.
 (click-goto:?page,&quot;2.3&quot;)</tw-passagedata><tw-passagedata pid="34" name="intro" tags="loading" position="399,209" size="100,100">&lt;style&gt;
 img {
-	max-width:80%;
-	max-height:80%;
+	max-width:60%;
+	max-height:60%;
 }
 &lt;/style&gt;
-&lt;span class = &#39;loadingtitle&#39;&gt;Welcome to
-THE GAME&lt;/span&gt;
-
-
 (live: 4s)[(goto: &quot;charsel&quot;)]
-
-
-
-
-
 &lt;span class = &quot;loading&quot;&gt;
 (text-colour:black)[Loading]&lt;img src=&#39;assets/loading/loading.gif&#39;&gt;
-&lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="namesel1" tags="" position="182,449" size="100,100">(set: $avatar to &quot;boy1&quot;)
+&lt;/span&gt;</tw-passagedata><tw-passagedata pid="35" name="namesel1" tags="" position="306,470" size="100,100">(set: $avatar to &quot;boy&quot;)
 
 Oh yes, I think I have seen you around.
 What is your name?
 
 (input-box:2bind $playername,&quot;=XX=&quot;,1,&quot;Enter Name&quot;)
 
-&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="36" name="namesel2" tags="" position="329,454" size="100,100">(set: $avatar to &quot;boy2&quot;)
+&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="36" name="namesel2" tags="" position="498,462" size="100,100">(set: $avatar to &quot;girl&quot;)
 
 Oh yes, I think I have seen you around.
 What is your name?
 
 (input-box:2bind $playername,&quot;=XX=&quot;,1,&quot;Enter Name&quot;)
 
-&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="37" name="namesel3" tags="" position="492,453" size="100,100">(set: $avatar to &quot;girl1&quot;)
-
-Oh yes, I think I have seen you around.
-What is your name?
-
-(input-box:2bind $playername,&quot;=XX=&quot;,1,&quot;Enter Name&quot;)
-
-&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="38" name="namesel4" tags="" position="627,449" size="100,100">(set: $avatar to &quot;girl2&quot;)
-
-Oh yes, I think I have seen you around.
-What is your name?
-
-(input-box:2bind $playername,&quot;=XX=&quot;,1,&quot;Enter Name&quot;)
-
-&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="39" name="cut1" tags="school" position="401,645" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You run outside before you get into trouble.
+&lt;span class=&quot;pixbut&quot;&gt;[[DONE-&gt;cut1]]&lt;/span&gt;</tw-passagedata><tw-passagedata pid="37" name="cut1" tags="school" position="401,645" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You run outside before you get into trouble.
 
 You: &quot;Phew that was close.&quot;
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
 
 
-(if:$avatar is &quot;boy1&quot;)[(click-goto:?page,&quot;cut21&quot;)]
-(if:$avatar is &quot;boy2&quot;)[(click-goto:?page,&quot;cut22&quot;)]
-(if:$avatar is &quot;girl1&quot;)[(click-goto:?page,&quot;cut23&quot;)]
-(if:$avatar is &quot;girl2&quot;)[(click-goto:?page,&quot;cut24&quot;)]</tw-passagedata><tw-passagedata pid="40" name="cut21" tags="friends1" position="176,771" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
+(if:$avatar is &quot;boy&quot;)[(click-goto:?page,&quot;cut21&quot;)]
+(if:$avatar is &quot;girl&quot;)[(click-goto:?page,&quot;cut22&quot;)]
+</tw-passagedata><tw-passagedata pid="38" name="cut21" tags="friends1" position="321,798" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
-$bff: whats up, $playername?
-$f1: good to see you, $playername.
+$bff: Whats up, $playername?
+$f1: Good to see you, $playername.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="41" name="cut3" tags="hall" position="408,964" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You meet your friends, and start walking towards the hallway.
+(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="39" name="cut3" tags="hall" position="408,964" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You meet your friends, and start walking towards the hallway.
 (text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]&lt;/span&gt;
-(click-goto:?page,&quot;1&quot;)</tw-passagedata><tw-passagedata pid="42" name="cut22" tags="friends2" position="324,772" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
+(click-goto:?page,&quot;1&quot;)</tw-passagedata><tw-passagedata pid="40" name="cut22" tags="friends2" position="519,791" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
 
-$bff: whats up, $playername?
-$f1: good to see you, $playername.
-&lt;img src=&#39;assets/down_arr.png&#39;&gt;
+$bff: Whats up, $playername?
+$f1: Good to see you, $playername.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
 &lt;/span&gt;
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="43" name="cut23" tags="friends3" position="477,777" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
+(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="41" name="1.205" tags="" position="1099,1098" size="100,100">Your next period beings. Maths.
 
-$bff: whats up, $playername?
-$f1: good to see you, $playername.
-&lt;img src=&#39;assets/down_arr.png&#39;&gt;
-&lt;/span&gt;
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="44" name="cut24" tags="freinds4" position="625,777" size="100,100">&lt;span class = &#39;dialoguebox&#39;&gt;You: &quot;Oh hi $bff, $f1. 
-
-$bff: whats up, $playername?
-$f1: good to see you, $playername.
-&lt;img src=&#39;assets/down_arr.png&#39;&gt;
-&lt;/span&gt;
-(click-goto:?page,&quot;cut3&quot;)</tw-passagedata><tw-passagedata pid="45" name="1.205" tags="" position="1099,1098" size="100,100">Your next period beings. Maths.
-
-(click-goto:?page,&quot;1.2075&quot;)</tw-passagedata><tw-passagedata pid="46" name="1.2075" tags="" position="1210,1099" size="100,100">You didn&#39;t get proper sleep last night.
+(click-goto:?page,&quot;1.2075&quot;)</tw-passagedata><tw-passagedata pid="42" name="1.2075" tags="" position="1210,1099" size="100,100">You didn&#39;t get proper sleep last night.
 
 While the teacher is teaching, your vision gets blurry and eyes start to close.
 
-(click-goto:?page,&quot;1.21&quot;)</tw-passagedata><tw-passagedata pid="47" name="2.3" tags="" position="1800,478" size="100,100">Teacher asks you a question.
-(click-goto:?page,&quot;2.4&quot;)</tw-passagedata><tw-passagedata pid="48" name="2.4" tags="" position="1799,599" size="100,100">You look around, feeling embarassed as you don&#39;t know the answer.
-(click-goto:?page,&quot;2.5&quot;)</tw-passagedata><tw-passagedata pid="49" name="2.5" tags="" position="1800,723" size="100,100">You: Ummmmhhh....
-(click-goto:?page,&quot;2.6&quot;)</tw-passagedata><tw-passagedata pid="50" name="2.6" tags="" position="1799,845" size="100,100">Teacher: You aren&#39;t paying attention to classes these days. What&#39;s wrong with you?
-(click-goto:?page,&quot;2.7&quot;)</tw-passagedata><tw-passagedata pid="51" name="2.7" tags="" position="1800,981" size="100,100">Teacher: I want to meet your parents. Please bring them to the principal&#39;s office tomorrow.
-(click-goto:?page,&quot;2.8&quot;)</tw-passagedata><tw-passagedata pid="52" name="2.8" tags="" position="1800,1116" size="100,100">(//Inner Voices//):(//sighs//) What even!
-(click-goto:?page,&quot;2.9&quot;)</tw-passagedata><tw-passagedata pid="53" name="2.9" tags="" position="1799,1245" size="100,100">And so, the class goes on while you get through the day.
-(click-goto:?page,&quot;2.91&quot;)</tw-passagedata><tw-passagedata pid="54" name="2.91" tags="" position="1799,1375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[The Next Day]
+(click-goto:?page,&quot;1.21&quot;)</tw-passagedata><tw-passagedata pid="43" name="2.3" tags="" position="1800,478" size="100,100">Teacher asks you a question.
+(click-goto:?page,&quot;2.4&quot;)</tw-passagedata><tw-passagedata pid="44" name="2.4" tags="" position="1799,599" size="100,100">You look around, feeling embarassed as you don&#39;t know the answer.
+(click-goto:?page,&quot;2.5&quot;)</tw-passagedata><tw-passagedata pid="45" name="2.5" tags="" position="1800,723" size="100,100">You: Ummmmhhh....
+(click-goto:?page,&quot;2.6&quot;)</tw-passagedata><tw-passagedata pid="46" name="2.6" tags="" position="1799,845" size="100,100">Teacher: You aren&#39;t paying attention to classes these days. What&#39;s wrong with you?
+(click-goto:?page,&quot;2.7&quot;)</tw-passagedata><tw-passagedata pid="47" name="2.7" tags="" position="1800,981" size="100,100">Teacher: I want to meet your parents. Please bring them to the principal&#39;s office tomorrow.
+(click-goto:?page,&quot;2.8&quot;)</tw-passagedata><tw-passagedata pid="48" name="2.8" tags="" position="1800,1116" size="100,100">(//Inner Voices//):(//sighs//) What even!
+(click-goto:?page,&quot;2.9&quot;)</tw-passagedata><tw-passagedata pid="49" name="2.9" tags="" position="1799,1245" size="100,100">And so, the class goes on while you get through the day.
+(click-goto:?page,&quot;2.91&quot;)</tw-passagedata><tw-passagedata pid="50" name="2.91" tags="" position="1799,1375" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[The Next Day]
 
-(click-goto:?page,&quot;2.92&quot;)</tw-passagedata><tw-passagedata pid="55" name="2.92" tags="" position="1801,1501" size="100,100">Your parents are present in the principal&#39;s office
+(click-goto:?page,&quot;2.92&quot;)</tw-passagedata><tw-passagedata pid="51" name="2.92" tags="" position="1801,1501" size="100,100">Your parents are present in the principal&#39;s office
 Your teacher is also there complaining about you.
 
-(click-goto:?page,&quot;2.93&quot;)</tw-passagedata><tw-passagedata pid="56" name="2.93" tags="" position="1798,1649" size="100,100">(//Inner Voices//): Why am I like this? What should I do?
+(click-goto:?page,&quot;2.93&quot;)</tw-passagedata><tw-passagedata pid="52" name="2.93" tags="" position="1798,1649" size="100,100">(//Inner Voices//): Why am I like this? What should I do?
 
-(click-goto:?page,&quot;2.94&quot;)</tw-passagedata><tw-passagedata pid="57" name="2.94" tags="" position="1799,1799" size="100,100">Principal: Is everything okay?
+(click-goto:?page,&quot;2.94&quot;)</tw-passagedata><tw-passagedata pid="53" name="2.94" tags="" position="1799,1799" size="100,100">Principal: Is everything okay?
 
 [[Yeah-&gt;2.941]]
 
-[[The teacher is just mean to me.-&gt;2.942]]</tw-passagedata><tw-passagedata pid="58" name="2.99" tags="" position="1899,2224" size="100,100">Your parents seem disappointed and they don&#39;t say anything and leave.
+[[The teacher is just mean to me.-&gt;2.942]]</tw-passagedata><tw-passagedata pid="54" name="2.99" tags="" position="1899,2224" size="100,100">Your parents seem disappointed and they don&#39;t say anything and leave.
 
-(click-goto:?page,&quot;3&quot;)</tw-passagedata><tw-passagedata pid="59" name="2.941" tags="" position="1697,1940" size="100,100">Principal: We want you to do better. If you ever need my help just let me know.
+(click-goto:?page,&quot;3&quot;)</tw-passagedata><tw-passagedata pid="55" name="2.941" tags="" position="1697,1940" size="100,100">Principal: We want you to do better. If you ever need my help just let me know.
 
-(click-goto:?page,&quot;3&quot;)</tw-passagedata><tw-passagedata pid="60" name="2.942" tags="" position="1898,1938" size="100,100">Teacher: What are you even talking about?
+(click-goto:?page,&quot;3&quot;)</tw-passagedata><tw-passagedata pid="56" name="2.942" tags="" position="1898,1938" size="100,100">Teacher: What are you even talking about?
 
 [[I am sorry-&gt;2.95]]
 
-[[You just hate me.-&gt;2.95]]</tw-passagedata><tw-passagedata pid="61" name="2.95" tags="" position="1898,2090" size="100,100">You and your parents walk out of the office.
+[[You just hate me.-&gt;2.95]]</tw-passagedata><tw-passagedata pid="57" name="2.95" tags="" position="1898,2090" size="100,100">You and your parents walk out of the office.
 
-</tw-passagedata><tw-passagedata pid="62" name="3" tags="" position="2302,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 3]
+</tw-passagedata><tw-passagedata pid="58" name="3" tags="" position="2302,100" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 3]
 
 
 tbd
 
-(click-goto:?page,&quot;5&quot;)</tw-passagedata><tw-passagedata pid="63" name="5" tags="" position="2662,102" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 5: The Test]
+(click-goto:?page,&quot;5&quot;)</tw-passagedata><tw-passagedata pid="59" name="5" tags="" position="2662,102" size="100,100">(align:&quot;=&gt;&lt;=&quot;)[Chapter 5: The Test]
 
-(set: $b1 to &quot;Bilal&quot;)</tw-passagedata><tw-passagedata pid="64" name="5.1" tags="" position="2664,240" size="100,100">Test going on in class.</tw-passagedata><tw-passagedata pid="65" name="5.2" tags="" position="2665,376" size="100,100">Someone calls you from behind, &quot;Psstt, what&#39;s the answer to the first one?&quot;
+(set: $b1 to &quot;Bilal&quot;)</tw-passagedata><tw-passagedata pid="60" name="5.1" tags="" position="2664,240" size="100,100">Test going on in class.</tw-passagedata><tw-passagedata pid="61" name="5.2" tags="" position="2665,376" size="100,100">Someone calls you from behind, &quot;Psstt, what&#39;s the answer to the first one?&quot;
 
 [[Decide to ignore it.-&gt;5.21]]
 
-[[Look back and see who said it.-&gt;5.25]]</tw-passagedata><tw-passagedata pid="66" name="5.21" tags="" position="2590,526" size="100,100">The person says again, &quot;Hey, I&#39;m talking to you.&quot;
+[[Look back and see who said it.-&gt;5.25]]</tw-passagedata><tw-passagedata pid="62" name="5.21" tags="" position="2590,526" size="100,100">The person says again, &quot;Hey, I&#39;m talking to you.&quot;
 
 [[Ignore it-&gt;5.5]]
 
-[[Look back and see who it is-&gt;5.25]]</tw-passagedata><tw-passagedata pid="67" name="5.5" tags="" position="2600,1196" size="100,100">Break Period Starts
+[[Look back and see who it is-&gt;5.25]]</tw-passagedata><tw-passagedata pid="63" name="5.5" tags="" position="2600,1196" size="100,100">Break Period Starts
 
-(click-goto:?page,&quot;5.6&quot;)</tw-passagedata><tw-passagedata pid="68" name="5.25" tags="" position="2775,690" size="100,100">It&#39;s $b1, the popular kid in class.
+(click-goto:?page,&quot;5.6&quot;)</tw-passagedata><tw-passagedata pid="64" name="5.25" tags="" position="2775,690" size="100,100">It&#39;s $b1, the popular kid in class.
 
-(click-goto:?page,&quot;5.3&quot;)</tw-passagedata><tw-passagedata pid="69" name="5.3" tags="" position="2773,814" size="100,100">(//Inner Voice//): I probably should tell him the answer or I&#39;ll become the talk of the class.
+(click-goto:?page,&quot;5.3&quot;)</tw-passagedata><tw-passagedata pid="65" name="5.3" tags="" position="2773,814" size="100,100">(//Inner Voice//): I probably should tell him the answer or I&#39;ll become the talk of the class.
 
 [[Tell him the answer-&gt;5.4]]
 
-[[&quot;I can&#39;t tell you this&quot; and go back doing your own quiz.-&gt;5.5]]</tw-passagedata><tw-passagedata pid="70" name="5.4" tags="" position="2779,952" size="100,100">The teacher sees you both talking.
+[[&quot;I can&#39;t tell you this&quot; and go back doing your own quiz.-&gt;5.5]]</tw-passagedata><tw-passagedata pid="66" name="5.4" tags="" position="2779,952" size="100,100">The teacher sees you both talking.
 
 Teacher:&quot;You two, stop cheating! I am cancelling your tests.&quot;
 
-(click-goto:?page,&quot;5.45&quot;)</tw-passagedata><tw-passagedata pid="71" name="5.45" tags="" position="2780,1076" size="100,100">(//Inner Voice//): Oh god, I really needed to score well in this.
+(click-goto:?page,&quot;5.45&quot;)</tw-passagedata><tw-passagedata pid="67" name="5.45" tags="" position="2780,1076" size="100,100">(//Inner Voice//): Oh god, I really needed to score well in this.
 
-</tw-passagedata><tw-passagedata pid="72" name="5.6" tags="" position="2599,1315" size="100,100">$b1 shows up with a couple of other people
+</tw-passagedata><tw-passagedata pid="68" name="5.6" tags="" position="2599,1315" size="100,100">$b1 shows up with a couple of other people
 
 [[Run Away-&gt;5.99]]
 
-[[Stand up and face him-&gt;5.7]]</tw-passagedata><tw-passagedata pid="73" name="5.99" tags="" position="2498,1801" size="100,100">$b1 looks at you frustrated while you are saved by the bell. Everyone goes back to class.</tw-passagedata><tw-passagedata pid="74" name="5.7" tags="" position="2725,1453" size="100,100">$b1: Do you have a problem with me? Do you know what I can do to you?
+[[Stand up and face him-&gt;5.7]]</tw-passagedata><tw-passagedata pid="69" name="5.99" tags="" position="2498,1801" size="100,100">$b1 looks at you frustrated while you are saved by the bell. Everyone goes back to class.</tw-passagedata><tw-passagedata pid="70" name="5.7" tags="" position="2725,1453" size="100,100">$b1: Do you have a problem with me? Do you know what I can do to you?
 
 [[I don&#39;t care-&gt;5.99]]
 
-[[You shouldn&#39;t have asked me-&gt;5.9]]</tw-passagedata><tw-passagedata pid="75" name="5.9" tags="" position="2700,1624" size="100,100">$b1: Yeah, next time I am better off asking someone who&#39;s not as dumb as you.
+[[You shouldn&#39;t have asked me-&gt;5.9]]</tw-passagedata><tw-passagedata pid="71" name="5.9" tags="" position="2700,1624" size="100,100">$b1: Yeah, next time I am better off asking someone who&#39;s not as dumb as you.
 
-(click-goto:?page,&quot;5.99&quot;)</tw-passagedata></tw-storydata>
+(click-goto:?page,&quot;5.99&quot;)</tw-passagedata><tw-passagedata pid="72" name="1.135" tags="whispering2" position="1298,470" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Hey $f1, was there a homework due today? When did this happen?
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.1315&quot;)</tw-passagedata><tw-passagedata pid="73" name="1.1315" tags="whispering2" position="1299,597" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;$f1: Don&#39;t you remember, you bunked that class.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;(click-goto:?page,&quot;1.13115&quot;)</tw-passagedata><tw-passagedata pid="74" name="1.13115" tags="whispering2" position="1295,720" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Shh, keep it down. Let me think of something.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.131115&quot;)</tw-passagedata><tw-passagedata pid="75" name="1.131115" tags="speakingbio2" position="1293,849" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: I did the homework Ma&#39;am but forgot my copy in the car.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.12&quot;)</tw-passagedata><tw-passagedata pid="76" name="1.1415" tags="speakingbio2" position="1550,598" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="77" name="1.1215" tags="speakingbio2" position="1071,600" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Thankyou Ma&#39;am. I will do that for sure. 
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata><tw-passagedata pid="78" name="1.1115" tags="speakingbio2" position="862,597" size="100,100">&lt;span class = &#39; dialoguebox&#39;&gt;You: Sorry Ma&#39;am, won&#39;t happen again.
+(text-style:&quot;blink&quot;)[&lt;img src=&#39;assets/down_arr.png&#39; class = &#39;arrow&#39;&gt;]
+&lt;/span&gt;
+(click-goto:?page,&quot;1.2&quot;)</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
